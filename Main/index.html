@@ -1,0 +1,128 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Meteorological Data Display Platform</title>
+        <!--When added to webpack you can delete this code-->
+        <link href = './styles/main.css' rel = 'stylesheet' type="text/css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+        <script src="./libs/jquery.min.js"></script>
+        <script src="./libs/leaflet-velocity.js"></script>
+        <script src="./libs/leaflet.TileLayer.js"></script>
+        <script src ='./libs/echarts.js'></script>
+        <script src = './app.js'></script>
+    </head>
+    <body>
+        <!--Whole container-->
+        <div class = 'main-container'>
+            <!--Container of Logo-->
+            <div class = 'logo'>
+                <div class = 'img_logo'>
+                    <img src = './images/logo.png'>
+                </div>
+                <div class = 'text_logo'>
+                    <span>Meteorological Data Display Platform</span>
+                </div>
+            </div>
+            <!--Container of left tools-->
+            <div class = 'leftTools'>
+                <div id = 'maps' class = 'lefttool'><span class= 'tool-txt' id = 'maps-txt'>Maps</span></div>
+                <div id = 'tools' class = 'lefttool'><span class = 'tool-txt' id = 'tools-txt'>Tools</span></div>
+                <div id = 'legends' class = 'lefttool'><span class = 'tool-txt' id = 'legend-txt'>Legends</span></div>
+            </div>
+            <!--Container of Second menu of Maps tools-->
+            <div class = 'mapSecondTools'>
+                <div class = 'item'>
+                    <div class = 'icon'>
+                        <img id = 'img_vector' src = './images/political.png'>
+                    </div>
+                    <div class = 'cont'>
+                        <!--data_type property is for identify which kind of base map will change-->
+                        <span class = 'text' data-type='vectormap'>Vector Map</span>
+                    </div>
+                </div>
+                <div class="gexian">|</div>
+                <div class = 'item'>
+                    <div class = 'icon'>
+                        <img id = 'img_satellite' src = './images/satellite.png'>
+                    </div>
+                    <div class = 'cont'>
+                        <span class = 'text' data-type = 'satellite'>Satellite Map</span>
+                    </div>
+                </div>
+                <div class="gexian">|</div>
+                <div class = 'item'>
+                    <div class = 'icon'>
+                        <img id = 'img_terr' src = './images/topographic.png'>
+                    </div>
+                    <div class = 'cont'>
+                        <span class = 'text' data-type = 'terr'>Terrain Map</span>
+                    </div>
+                </div>
+            </div>
+            <div class= 'toolSecondTools'>
+                <div class = 'item'>
+                    <div class = 'icon'>
+                        <img id = 'img_refresh' src = './images/reset_gray1.png'>
+                    </div>
+                    <div class = 'cont'>
+                        <span class = 'text' >Reset</span>
+                    </div>
+                </div>
+                <div class = 'gexian'>|</div>
+                <div class = 'item'>
+                    <div class = 'icon'>
+                        <img id = 'station'src = './images/rect_uncheck.png'>
+                    </div>
+                    <div class = 'cont'>
+                        <span class = 'text'>Stations</span>
+                    </div>
+                </div> 
+                <div class = 'gexian'>|</div>
+                <div class = 'item'>
+                    <div class = 'icon'>
+                        <img id = 'cho_map' src = './images/rect_uncheck.png'>
+                    </div>
+                    <div class = 'cont'>
+                        <span class = 'text'>Choroplethic Map</span>
+                    </div>
+                </div>
+            </div>
+            <!--Container of tool bar on the top-right corner-->
+            <div class='conditionBox'>
+                <ul>
+                    <li class= 'Warning'>Warning<b></b></li>
+                    <li class= 'Prediction'>Prediction<b></b></li>
+                    <li class = 'Scene'>Scene<b></b></li>
+                    <li class = 'Typhoon'>Typhoon<b></b></li>
+                    <li class = 'Radar'>Radar<b></b></li>
+                    <li class = 'Satellite' >Satellite</li>
+                </ul>
+            </div>
+            <!--Container of Second toolbar-->
+            <div class = 'warp_list' id = 'menu'>
+                <div class = 'menulist'>
+                    <ul>
+                        <li id = '115990101'>Temperature</li>
+                        <li id = '115990102'>Pressure</li>
+                        <li id = '115990103'>Relative Humidity</li>
+                        <li id = '115990104'>Wind</li>
+                        <li id = '1150101020'>Precipitation</li>
+                    </ul>
+                </div>
+            </div>
+            <!--Map container-->
+            <canvas id = 'canvasMap' style = 'display:none'></canvas>
+            <div id = 'mymap' style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+        </div>
+        <script>
+            var ctx = 'http://localhost:8080/dataGis';
+            //this 
+            //var ctx = "http://data.cma.cn/dataGis";
+            var globalParam = {};
+        </script>
+    </body>
+</html>

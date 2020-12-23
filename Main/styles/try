@@ -1,0 +1,190 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+.main-container .logo{
+    position: absolute;
+    left:22px;
+    top: 20px;
+    width:460px;
+    z-index: 1000;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+}
+.main-container .logo .img_logo{
+    float: left;
+    padding: 5px 10px 1px 5px;
+}
+.main-container .logo .text_logo{
+    float: left;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+}
+.main-container #mymap{
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.main-container .leftTools {
+    position: absolute;
+    left: 22px;
+    top:230px;
+    width: 55px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px grey;
+    z-index: 1000;
+}
+.lefttool{
+    height: 40px;
+    width: 55px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.tool-txt {
+    color: rgb(67, 67, 67);
+    font-size: 13px;
+    position: relative;
+    top: 25%;
+    margin-top: 10px;
+}
+.mapSecondTools{
+    position: absolute;
+    top: 235px;
+    left: 80px;
+    width:410px;
+    height:35px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px grey;
+    z-index: 1111;
+    display: none; /*Using Javascript change this properties*/
+    cursor: pointer;
+    opacity: 75%;
+}
+.cont{
+    float: left;
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    line-height: 32px;
+}
+.icon{
+    float: left;
+    width: 10px;
+    text-align: center;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+.gexian{
+    float: left;
+    width: 10px;
+    text-align: center;
+    line-height: 32px;
+}
+.toolSecondTools{
+    position: absolute;
+    top: 272px;
+    left: 80px;
+    width: 410px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px grey;
+    z-index:1111;
+    opacity: 0.75;
+    cursor: pointer;
+    display:none;
+}
+.main-container .conditionBox{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 555px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px #aaa;
+    border-radius: 6px;
+}
+.main-container .conditionBox ul{
+    list-style: none;
+    margin: 0 0 0 15px;
+    padding: 0px;
+
+}
+.conditionBox{
+    z-index: 1100;
+}
+.conditionBox b {
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #fff;
+    margin-left: 10px;
+}
+.conditionBox li {
+    float:left;
+    padding-left:20px;
+    width:70px;
+    height: 40px;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 14px;
+    color: #686c7e;
+    background-position: 0px 13px;
+    background-repeat: no-repeat;
+}
+.Warning{
+    background-image: url('../img/yj.png');
+}
+.Prediction{
+    background-image: url("../img/yb.png");
+    background-position: 0px 10px !important;
+}
+.Scene{
+    background-image: url("../img/sk.png");
+}
+.Typhoon{
+    background-image: url("../img/tf.png");
+}
+.Radar{
+    background-image: url("../img/ld.png");
+}
+.Satellite{
+    background-image: url("../img/wx.png");
+}
+.conditionBox .Satellite{
+    margin-left: 0;
+}
+.warp_list{
+    position: absolute;
+    top: 66px;
+    right: 235px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 1110;
+    box-shadow: 2px 2px 2px grey;
+}
+ul{
+    padding: 0 0 0 25px;
+    margin: 0 0 0 0;
+}
+.menulist{
+    color: #686c7e;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    line-height: 30px;
+    width: 150px;
+    cursor: pointer;
+    display: none;/*JS change this properties*/
+}
+
+
+
+
